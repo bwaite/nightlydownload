@@ -1,0 +1,11 @@
+[Unit]
+Description=nightly download startup timer
+
+[Timer]
+# To add a time of your choosing here, please refer to systemd.time manual page for the correct format
+OnCalendar=2:30:00
+Persistent=true
+Unit=nightlydownload.service
+
+[Install]
+WantedBy=basic.target

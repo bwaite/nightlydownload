@@ -1,0 +1,13 @@
+[Unit]
+Description=Nightly Downloader
+Wants=timer-daily.timer
+
+[Service]
+User=bryan
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+ExecStart=/home/bryan/nightlydownload.py /home/bryan/filedownloadlist.json /home/bryan/nightlydl/
+
+[Install]
+WantedBy=timer-daily.target

@@ -1,0 +1,8 @@
+[Unit]
+Description=Terminates the download script if the time is past, and shutsdown the system if it's already finished
+
+[Service]
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+ExecStart=/home/bryan/ndterminate.py
